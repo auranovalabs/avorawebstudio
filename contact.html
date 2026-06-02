@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Contact — Avorawebstudios</title>
+    <meta name="description" content="Initiate your bespoke web development project with Avorawebstudios. View pricing packages and FAQs.">
+    
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#e2e2e2",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#848484",
+                        "inverse-primary": "#c6c6c6",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "primary": "#000000",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#5e5e5e",
+                        "secondary": "#5e5e5e",
+                        "outline-variant": "#cfc4c5",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "tertiary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#464747",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-primary-fixed": "#1b1b1b",
+                        "secondary-fixed": "#e3e2e2",
+                        "outline": "#7e7576",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#4c4546",
+                        "tertiary-container": "#1a1c1c",
+                        "on-primary-fixed-variant": "#474747",
+                        "primary-container": "#1b1b1b",
+                        "surface-container-low": "#f3f3f3",
+                        "primary-fixed": "#e2e2e2",
+                        "on-secondary-container": "#646464",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-container": "#838484",
+                        "secondary-container": "#e3e2e2",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-dim": "#dadada"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "margin-tablet": "32px",
+                        "gutter": "32px",
+                        "stack-md": "48px",
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "stack-lg": "80px",
+                        "stack-sm": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px"
+                    },
+                    fontFamily: {
+                        "label-xs": ["Geist"],
+                        "label-sm": ["Geist"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-xl-mobile": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "body-lg": ["Geist"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Geist"],
+                        "display-xl": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "label-xs": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "label-sm": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "500" }],
+                        "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "display-xl-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700" }],
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "600" }],
+                        "headline-sm": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }],
+                        "display-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+                        "display-xl": ["72px", { lineHeight: "80px", letterSpacing: "-0.04em", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Material Icons and Core Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+
+    <!-- TopNavBar (Shared Component) -->
+    <nav id="main-nav" class="bg-white/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant h-16 transition-all duration-300">
+        <div class="flex items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto justify-between relative">
+            <a class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary mr-auto" href="index.html">Avorawebstudios</a>
+            
+            <!-- Desktop Menu Links -->
+            <div class="hidden md:flex space-x-gutter items-center absolute left-1/2 -translate-x-1/2">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="work.html">Work</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="about.html">About</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
+            </div>
+            
+            <!-- Mobile Toggle -->
+            <div class="ml-auto md:hidden">
+                <button class="mobile-menu-trigger text-primary flex items-center justify-center" aria-label="Toggle navigation drawer">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer Overlay (Shared Component) -->
+    <div id="mobile-drawer" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center gap-8">
+        <button id="close-drawer" class="absolute top-4 right-margin-mobile text-primary flex items-center justify-center" aria-label="Close navigation drawer">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+        <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+        <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
+        <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
+        <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+        <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors" href="privacy.html">Privacy</a>
+    </div>
+
+    <!-- Main Content Layout -->
+    <main class="flex-grow pt-32 pb-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+        <!-- Section 1: Intro Text & Intake Intake Form Grid -->
+        <header class="mb-stack-md">
+            <h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary tracking-tight leading-none mb-4">Let's talk.</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">We partner with ambitious brands to build fast, beautiful, and secure digital experiences. Tell us about your project.</p>
+        </header>
+
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-gutter items-start mb-[120px]">
+            <!-- Form: Left Column (2-Span on Desktop) -->
+            <form class="lg:col-span-2 border border-outline-variant bg-white p-8 rounded-lg shadow-sm" onsubmit="event.preventDefault(); alert('Thank you! Avorawebstudios will connect with you soon.');">
+                <h2 class="font-headline-sm text-headline-sm text-primary mb-6">Project Details</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 mb-8">
+                    <!-- Name Input -->
+                    <div class="flex flex-col">
+                        <label for="intake-name" class="font-label-sm text-label-sm text-secondary mb-1">Name</label>
+                        <input id="intake-name" class="intake-input" type="text" placeholder="John Doe" required>
+                    </div>
+                    <!-- Email Input -->
+                    <div class="flex flex-col">
+                        <label for="intake-email" class="font-label-sm text-label-sm text-secondary mb-1">Email</label>
+                        <input id="intake-email" class="intake-input" type="email" placeholder="john@example.com" required>
+                    </div>
+                    <!-- Phone Input -->
+                    <div class="flex flex-col">
+                        <label for="intake-phone" class="font-label-sm text-label-sm text-secondary mb-1">Phone Number</label>
+                        <input id="intake-phone" class="intake-input" type="tel" placeholder="+1 555-0123" required>
+                    </div>
+                    <!-- Dropdown Select -->
+                    <div class="flex flex-col">
+                        <label for="intake-type" class="font-label-sm text-label-sm text-secondary mb-1">Project Type</label>
+                        <select id="intake-type" class="intake-input" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="business">Business Website</option>
+                            <option value="portfolio">Portfolio Website</option>
+                            <option value="landing">Landing Page</option>
+                            <option value="refresh">Website Refresh</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Description Text Area -->
+                <div class="flex flex-col mb-8">
+                    <label for="intake-desc" class="font-label-sm text-label-sm text-secondary mb-1">Project Description</label>
+                    <textarea id="intake-desc" class="intake-input min-h-[100px]" placeholder="Briefly describe what you're looking to achieve..." required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit" class="bg-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded hover:bg-surface-tint transition-all uppercase tracking-wider" aria-label="Submit intake form details">
+                        connect
+                    </button>
+                </div>
+            </form>
+
+            <!-- Direct Contact Box: Right Column (1-Span) -->
+            <div class="border border-outline-variant bg-white p-8 rounded-lg shadow-sm flex flex-col justify-between h-full min-h-[400px]">
+                <div>
+                    <h2 class="font-headline-sm text-headline-sm text-primary mb-6">Direct Contact</h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary text-2xl">mail</span>
+                            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4 break-all" href="mailto:auranovalabs@gmail.com">
+                                auranovalabs@gmail.com
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary text-2xl">chat</span>
+                            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4" href="https://wa.me/919000000000" target="_blank" rel="noopener noreferrer">
+                                WhatsApp ( 900)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-8 border-t border-outline-variant pt-6">
+                    <p class="font-label-xs text-label-xs text-secondary italic tracking-wide uppercase">
+                        contact us on whatsapp for faster replies .
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Pricing Matrix -->
+        <section class="mb-[120px] w-full">
+            <header class="text-center mb-stack-lg max-w-2xl mx-auto">
+                <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight leading-none mb-4">Pricing</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Transparent packages for every stage of your digital journey.</p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+                <!-- Card 1: Personal -->
+                <div class="pricing-card rounded-lg p-8 flex flex-col justify-between h-full relative">
+                    <div>
+                        <h3 class="font-headline-sm text-headline-sm text-primary">Personal</h3>
+                        <div class="mt-4">
+                            <span class="font-display-lg text-3xl font-bold">₹7,000</span>
+                            <span class="font-label-xs text-secondary uppercase block mt-1">Starting At</span>
+                        </div>
+                        <ul class="mt-8 space-y-4 border-t border-outline-variant pt-6">
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Up to 3 pages</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Responsive design</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Contact form</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Performance optimization</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Deployment support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-primary text-on-primary font-label-sm text-label-sm py-4 mt-8 hover:bg-surface-tint transition-all rounded uppercase font-bold tracking-wider" aria-label="Inquire about Personal tier">
+                        INQUIRE
+                    </button>
+                </div>
+
+                <!-- Card 2: Business (Popular) -->
+                <div class="pricing-card rounded-lg p-8 flex flex-col justify-between h-full relative border-2 border-primary shadow-md">
+                    <!-- POPULAR Badge -->
+                    <div class="absolute -top-3.5 right-6 bg-primary text-on-primary font-label-xs text-xs px-3 py-1 rounded uppercase tracking-wider font-bold">
+                        Popular
+                    </div>
+                    <div>
+                        <h3 class="font-headline-sm text-headline-sm text-primary">Business</h3>
+                        <div class="mt-4">
+                            <span class="font-display-lg text-3xl font-bold">₹14,000</span>
+                            <span class="font-label-xs text-secondary uppercase block mt-1">Starting At</span>
+                        </div>
+                        <ul class="mt-8 space-y-4 border-t border-outline-variant pt-6">
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span class="font-bold text-on-surface">Everything in Personal</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Up to 8 pages</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Maps & WhatsApp integration</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Enhanced SEO setup</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-primary text-on-primary font-label-sm text-label-sm py-4 mt-8 hover:bg-surface-tint transition-all rounded uppercase font-bold tracking-wider" aria-label="Inquire about Business tier">
+                        INQUIRE
+                    </button>
+                </div>
+
+                <!-- Card 3: Custom -->
+                <div class="pricing-card rounded-lg p-8 flex flex-col justify-between h-full relative">
+                    <div>
+                        <h3 class="font-headline-sm text-headline-sm text-primary">Custom</h3>
+                        <div class="mt-4">
+                            <span class="font-display-lg text-3xl font-bold">Quote</span>
+                            <span class="font-label-xs text-secondary uppercase block mt-1">Tailored Pricing</span>
+                        </div>
+                        <ul class="mt-8 space-y-4 border-t border-outline-variant pt-6">
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Tailored scope</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Flexible page count</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Custom integrations</span>
+                            </li>
+                            <li class="flex items-center gap-3 font-body-md text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                                <span>Ongoing support options</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-transparent text-primary border border-primary font-label-sm text-label-sm py-4 mt-8 hover:bg-surface-container transition-all rounded uppercase font-bold tracking-wider" aria-label="Contact us for custom inquiry">
+                        CONTACT US
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: FAQ Accordions -->
+        <section class="max-w-4xl mx-auto w-full mb-[60px]">
+            <header class="text-center mb-stack-lg">
+                <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight leading-none mb-4">Frequently Asked Questions</h2>
+            </header>
+
+            <div class="border-t border-outline-variant">
+                <!-- FAQ Item 1 -->
+                <div class="faq-accordion border-b border-outline-variant py-6">
+                    <div class="faq-trigger flex justify-between items-center" aria-expanded="false">
+                        <h3 class="font-headline-sm text-headline-sm text-primary">What is your typical process?</h3>
+                        <span class="faq-icon material-symbols-outlined text-primary text-xl">expand_more</span>
+                    </div>
+                    <div class="faq-panel">
+                        <p class="font-body-md text-body-md text-on-surface-variant pt-4 leading-relaxed">
+                            We begin with a details consultation where we outline layout structures and copywriting parameters. Once finalized, we enter building and validation stages to ensure high performance and SEO readiness before deploying to production.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-accordion border-b border-outline-variant py-6">
+                    <div class="faq-trigger flex justify-between items-center" aria-expanded="false">
+                        <h3 class="font-headline-sm text-headline-sm text-primary">Do you build static sites?</h3>
+                        <span class="faq-icon material-symbols-outlined text-primary text-xl">expand_more</span>
+                    </div>
+                    <div class="faq-panel">
+                        <p class="font-body-md text-body-md text-on-surface-variant pt-4 leading-relaxed">
+                            Yes, we exclusively build optimized static sites using HTML, Tailwind CSS, and Vanilla JavaScript. By avoiding heavy database-driven CMS platforms like WordPress or Shopify, we ensure site speed remains exceptionally fast, highly secure, and virtually maintenance-free.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-accordion border-b border-outline-variant py-6">
+                    <div class="faq-trigger flex justify-between items-center" aria-expanded="false">
+                        <h3 class="font-headline-sm text-headline-sm text-primary">What is the expected timeline?</h3>
+                        <span class="faq-icon material-symbols-outlined text-primary text-xl">expand_more</span>
+                    </div>
+                    <div class="faq-panel">
+                        <p class="font-body-md text-body-md text-on-surface-variant pt-4 leading-relaxed">
+                            A standard site (under 5 pages) typically takes 2 to 3 weeks from kickoff to deployment. Larger or more custom layouts take between 4 to 6 weeks, depending on integration complexity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Structural Footer (Shared Component) -->
+    <footer class="bg-surface w-full py-stack-lg border-t border-outline-variant mt-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <!-- Brand Info -->
+            <div class="flex flex-col gap-4">
+                <span class="font-headline-sm text-headline-sm font-bold text-primary">Avorawebstudios</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Avorawebstudios. Built for performance.</p>
+            </div>
+            <!-- Site Directory -->
+            <div class="flex flex-col gap-2">
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors" href="work.html">Work</a>
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors" href="about.html">About</a>
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors" href="contact.html">Contact</a>
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors" href="privacy.html">Privacy</a>
+            </div>
+            <!-- Contact Anchor -->
+            <div class="flex flex-col gap-2 md:items-end">
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors break-all" href="mailto:auranovalabs@gmail.com">auranovalabs@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Execution Engine -->
+    <script src="assets/js/app.js" defer></script>
+</body>
+</html>

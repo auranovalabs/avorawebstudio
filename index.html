@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Avorawebstudios — Premium Web Development Studio</title>
+    <meta name="description" content="Avorawebstudios is a premium web development studio crafting clean, fast, and minimalist websites for businesses and personal brands.">
+    
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#e2e2e2",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#848484",
+                        "inverse-primary": "#c6c6c6",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "primary": "#000000",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#5e5e5e",
+                        "secondary": "#5e5e5e",
+                        "outline-variant": "#cfc4c5",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "tertiary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#464747",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-primary-fixed": "#1b1b1b",
+                        "secondary-fixed": "#e3e2e2",
+                        "outline": "#7e7576",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#4c4546",
+                        "tertiary-container": "#1a1c1c",
+                        "on-primary-fixed-variant": "#474747",
+                        "primary-container": "#1b1b1b",
+                        "surface-container-low": "#f3f3f3",
+                        "primary-fixed": "#e2e2e2",
+                        "on-secondary-container": "#646464",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-container": "#838484",
+                        "secondary-container": "#e3e2e2",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-dim": "#dadada"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "margin-tablet": "32px",
+                        "gutter": "32px",
+                        "stack-md": "48px",
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "stack-lg": "80px",
+                        "stack-sm": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px"
+                    },
+                    fontFamily: {
+                        "label-xs": ["Geist"],
+                        "label-sm": ["Geist"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-xl-mobile": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "body-lg": ["Geist"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Geist"],
+                        "display-xl": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "label-xs": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "label-sm": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "500" }],
+                        "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "display-xl-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "700" }],
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "600" }],
+                        "headline-sm": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }],
+                        "display-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+                        "display-xl": ["72px", { lineHeight: "80px", letterSpacing: "-0.04em", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Material Icons and Core Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+
+    <!-- TopNavBar (Shared Component) -->
+    <nav id="main-nav" class="bg-white/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant h-16 transition-all duration-300">
+        <div class="flex items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto justify-between relative">
+            <a class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary mr-auto" href="index.html">Avorawebstudios</a>
+            
+            <!-- Desktop Menu Links -->
+            <div class="hidden md:flex space-x-gutter items-center absolute left-1/2 -translate-x-1/2">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="work.html">Work</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="about.html">About</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
+            </div>
+            
+            <!-- Mobile Toggle -->
+            <div class="ml-auto md:hidden">
+                <button class="mobile-menu-trigger text-primary flex items-center justify-center" aria-label="Toggle navigation drawer">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer Overlay (Shared Component) -->
+    <div id="mobile-drawer" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center gap-8">
+        <button id="close-drawer" class="absolute top-4 right-margin-mobile text-primary flex items-center justify-center" aria-label="Close navigation drawer">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+        <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+        <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
+        <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
+        <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+        <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors" href="privacy.html">Privacy</a>
+    </div>
+
+    <!-- Main Content Stream -->
+    <main class="flex-grow pt-16">
+        <!-- Hero Section with Wavy BG and Particle Canvas -->
+        <section class="wavy-bg w-full min-h-[80vh] flex flex-col justify-center items-center py-stack-lg border-b border-surface-variant relative">
+            <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-40"></canvas>
+            <div class="wavy-content max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center flex flex-col items-center">
+                <h1 class="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-white max-w-4xl tracking-tight text-center drop-shadow-md mb-4">Websites that make a strong first impression</h1>
+                <p class="font-body-lg text-body-lg text-gray-300 max-w-3xl mb-stack-md text-center">A small studio building clean, fast, professional websites for small businesses, professionals, and personal brands.</p>
+                <div class="flex flex-col sm:flex-row gap-base justify-center">
+                    <a class="bg-white text-black font-label-sm text-label-sm px-8 py-4 rounded hover:bg-gray-200 transition-colors text-center shadow-lg" href="work.html">
+                        View Work
+                    </a>
+                    <a class="bg-transparent text-white font-label-sm text-label-sm px-8 py-4 rounded border border-white/40 hover:bg-white/10 transition-colors text-center backdrop-blur-sm" href="contact.html">Start a conversation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Build Column Grids -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+            <div class="mb-stack-md">
+                <h2 class="font-headline-md text-headline-md text-primary mb-2">What We Build</h2>
+                <div class="w-12 h-1 bg-primary"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <div class="p-6 border border-surface-variant rounded bg-surface-container-lowest hover:bg-surface-bright transition-colors duration-200">
+                    <span class="material-symbols-outlined mb-4 text-3xl text-primary">domain</span>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Business Websites</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Professional online presence for local businesses, consultants, and service providers.</p>
+                </div>
+                <div class="p-6 border border-surface-variant rounded bg-surface-container-lowest hover:bg-surface-bright transition-colors duration-200">
+                    <span class="material-symbols-outlined mb-4 text-3xl text-primary">badge</span>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Portfolio Websites</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Thoughtful showcases for architects, photographers, artists, and creators.</p>
+                </div>
+                <div class="p-6 border border-surface-variant rounded bg-surface-container-lowest hover:bg-surface-bright transition-colors duration-200">
+                    <span class="material-symbols-outlined mb-4 text-3xl text-primary">flight_land</span>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Landing Pages</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Focused, high-converting pages for coaches, tutors, and specific projects.</p>
+                </div>
+                <div class="p-6 border border-surface-variant rounded bg-surface-container-lowest hover:bg-surface-bright transition-colors duration-200">
+                    <span class="material-symbols-outlined mb-4 text-3xl text-primary">autorenew</span>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Website Refreshes</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Modernizing existing sites with clean code and refined aesthetics.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curated Featured Work Block -->
+        <section class="bg-surface-container-lowest border-y border-surface-variant" id="featured-work">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+                <div class="mb-stack-md flex justify-between items-end">
+                    <div>
+                        <h2 class="font-headline-md text-headline-md text-primary mb-2">Featured Work</h2>
+                        <div class="w-12 h-1 bg-primary"></div>
+                    </div>
+                    <a class="flex items-center font-label-sm text-label-sm text-primary hover:text-surface-tint transition-colors" href="work.html">
+                        View All <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <!-- Showcase container target hydrated asynchronously -->
+                <div id="featured-work-container" class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+                    <!-- Loading Phase Skeletons -->
+                    <div class="animate-pulse flex flex-col gap-4">
+                        <div class="aspect-[4/3] bg-surface-container border border-surface-variant rounded"></div>
+                        <div class="flex justify-between items-start">
+                            <div class="w-2/3 space-y-2">
+                                <div class="h-6 bg-surface-container rounded"></div>
+                                <div class="h-4 bg-surface-container rounded w-5/6"></div>
+                            </div>
+                            <div class="h-6 bg-surface-container rounded w-12"></div>
+                        </div>
+                    </div>
+                    <div class="animate-pulse flex flex-col gap-4">
+                        <div class="aspect-[4/3] bg-surface-container border border-surface-variant rounded"></div>
+                        <div class="flex justify-between items-start">
+                            <div class="w-2/3 space-y-2">
+                                <div class="h-6 bg-surface-container rounded"></div>
+                                <div class="h-4 bg-surface-container rounded w-3/4"></div>
+                            </div>
+                            <div class="h-6 bg-surface-container rounded w-12"></div>
+                        </div>
+                    </div>
+                    <div class="animate-pulse flex flex-col gap-4">
+                        <div class="aspect-[4/3] bg-surface-container border border-surface-variant rounded"></div>
+                        <div class="flex justify-between items-start">
+                            <div class="w-2/3 space-y-2">
+                                <div class="h-6 bg-surface-container rounded"></div>
+                                <div class="h-4 bg-surface-container rounded w-5/6"></div>
+                            </div>
+                            <div class="h-6 bg-surface-container rounded w-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Structural Footer (Shared Component) -->
+    <footer class="bg-surface w-full py-stack-lg border-t border-outline-variant mt-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <!-- Brand Info -->
+            <div class="flex flex-col gap-4">
+                <span class="font-headline-sm text-headline-sm font-bold text-primary">Avorawebstudios</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Avorawebstudios. Built for performance.</p>
+            </div>
+            <!-- Site Directory -->
+            <div class="flex flex-col gap-2">
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors" href="work.html">Work</a>
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors" href="about.html">About</a>
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors" href="contact.html">Contact</a>
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors" href="privacy.html">Privacy</a>
+            </div>
+            <!-- Contact Anchor -->
+            <div class="flex flex-col gap-2 md:items-end">
+                <a class="font-body-md text-body-md text-on-surface-variant underline decoration-1 underline-offset-4 hover:text-primary transition-colors break-all" href="mailto:auranovalabs@gmail.com">auranovalabs@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Execution Engine -->
+    <script src="assets/js/app.js" defer></script>
+</body>
+</html>

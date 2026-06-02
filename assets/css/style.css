@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Hanken+Grotesk:wght@500;600;700;800&display=swap');
+
+/* Base Font Families and Settings */
+body {
+    font-family: 'Geist', sans-serif;
+    background-color: #f9f9f9;
+    color: #1a1c1c;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Wavy Hero Background */
+.wavy-bg {
+    background-color: #000000;
+    background-image: linear-gradient(120deg, #000000 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+.wavy-bg::before, .wavy-bg::after {
+    content: "";
+    position: absolute;
+    left: -50%;
+    min-width: 200vw;
+    min-height: 200vw;
+    background-color: #1c1c1c;
+    animation-name: wave-rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    pointer-events: none;
+}
+.wavy-bg::before {
+    bottom: 30vh;
+    border-radius: 43%;
+    animation-duration: 25s;
+    opacity: 0.12;
+}
+.wavy-bg::after {
+    bottom: 25vh;
+    border-radius: 38%;
+    animation-duration: 30s;
+    opacity: 0.08;
+}
+@keyframes wave-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.wavy-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Dynamic Active Navigation Link Bold State */
+.nav-link-active {
+    border-bottom: 2px solid #000000;
+    color: #000000 !important;
+    font-weight: 600;
+}
+.dark .nav-link-active {
+    border-bottom-color: #ffffff;
+    color: #ffffff !important;
+}
+
+/* Pricing Card Micro-interactions */
+.pricing-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.2s ease;
+    border: 1px solid #E5E5E5;
+    background-color: #ffffff;
+}
+@media (hover: hover) {
+    .pricing-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+        border-color: #cfc4c5;
+    }
+}
+
+/* Form Fields Interaction Style: Bottom-only borders & Bold highlights */
+.intake-input {
+    background-color: transparent !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid #cfc4c5 !important;
+    border-radius: 0 !important;
+    padding: 0.75rem 0 !important;
+    font-family: 'Geist', sans-serif;
+    color: #1a1c1c;
+    width: 100%;
+    transition: border-color 0.2s ease-in-out;
+}
+.intake-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid #000000 !important;
+}
+
+/* FAQ Accordion Transitions */
+.faq-trigger {
+    cursor: pointer;
+    user-select: none;
+}
+.faq-icon {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.faq-trigger[aria-expanded="true"] .faq-icon {
+    transform: rotate(180deg);
+}
+.faq-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Smooth Navigation Scroll shadow interaction */
+.nav-scroll-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    border-bottom: 1px solid #E5E5E5;
+}
