@@ -5,6 +5,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Contact — Avorawebstudios</title>
     <meta name="description" content="Initiate your bespoke web development project with Avorawebstudios. View pricing packages and FAQs.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Tailwind CSS Engine -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -109,7 +114,7 @@
     </script>
     
     <!-- Material Icons and Core Stylesheet -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@24,400,0&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
@@ -150,36 +155,39 @@
     <!-- Main Content Layout -->
     <main class="flex-grow pt-32 pb-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
         <!-- Section 1: Intro Text & Intake Intake Form Grid -->
-        <header class="mb-stack-md">
+        <header id="lets-talk" class="mb-stack-md">
             <h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary tracking-tight leading-none mb-4">Let's talk.</h1>
             <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">We partner with ambitious brands to build fast, beautiful, and secure digital experiences. Tell us about your project.</p>
         </header>
 
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-gutter items-start mb-[120px]">
             <!-- Form: Left Column (2-Span on Desktop) -->
-            <form class="lg:col-span-2 border border-outline-variant bg-white p-8 rounded-lg shadow-sm" onsubmit="event.preventDefault(); alert('Thank you! Avorawebstudios will connect with you soon.');">
+            <form id="contact-form" class="lg:col-span-2 border border-outline-variant bg-white p-8 rounded-lg shadow-sm">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" id="w3f-key" value="">
+                
                 <h2 class="font-headline-sm text-headline-sm text-primary mb-6">Project Details</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 mb-8">
                     <!-- Name Input -->
                     <div class="flex flex-col">
                         <label for="intake-name" class="font-label-sm text-label-sm text-secondary mb-1">Name</label>
-                        <input id="intake-name" class="intake-input" type="text" placeholder="John Doe" required>
+                        <input id="intake-name" name="name" class="intake-input" type="text" placeholder="John Doe" required>
                     </div>
                     <!-- Email Input -->
                     <div class="flex flex-col">
                         <label for="intake-email" class="font-label-sm text-label-sm text-secondary mb-1">Email</label>
-                        <input id="intake-email" class="intake-input" type="email" placeholder="john@example.com" required>
+                        <input id="intake-email" name="email" class="intake-input" type="email" placeholder="john@example.com" required>
                     </div>
                     <!-- Phone Input -->
                     <div class="flex flex-col">
                         <label for="intake-phone" class="font-label-sm text-label-sm text-secondary mb-1">Phone Number</label>
-                        <input id="intake-phone" class="intake-input" type="tel" placeholder="+1 555-0123" required>
+                        <input id="intake-phone" name="phone" class="intake-input" type="tel" placeholder="+1 555-0123" required>
                     </div>
                     <!-- Dropdown Select -->
                     <div class="flex flex-col">
                         <label for="intake-type" class="font-label-sm text-label-sm text-secondary mb-1">Project Type</label>
-                        <select id="intake-type" class="intake-input" required>
+                        <select id="intake-type" name="project_type" class="intake-input" required>
                             <option value="" disabled selected>Select an option</option>
                             <option value="business">Business Website</option>
                             <option value="portfolio">Portfolio Website</option>
@@ -192,11 +200,11 @@
                 <!-- Description Text Area -->
                 <div class="flex flex-col mb-8">
                     <label for="intake-desc" class="font-label-sm text-label-sm text-secondary mb-1">Project Description</label>
-                    <textarea id="intake-desc" class="intake-input min-h-[100px]" placeholder="Briefly describe what you're looking to achieve..." required></textarea>
+                    <textarea id="intake-desc" name="description" class="intake-input min-h-[100px]" placeholder="Briefly describe what you're looking to achieve..." required></textarea>
                 </div>
 
-                <!-- Submit Button -->
-                <div>
+                <!-- Submit Button and Inline Status -->
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4">
                     <button type="submit" class="bg-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded hover:bg-surface-tint transition-all uppercase tracking-wider" aria-label="Submit intake form details">
                         connect
                     </button>
@@ -215,17 +223,17 @@
                             </a>
                         </li>
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary text-2xl">chat</span>
-                            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4" href="https://wa.me/919000000000" target="_blank" rel="noopener noreferrer">
-                                WhatsApp ( 900)
+                            <!-- <span class="material-symbols-outlined text-primary text-2xl">chat</span> -->
+                            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4" href="/" target="_blank" rel="noopener noreferrer">
+                                <!-- Whatsapp no here! -->
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div class="mt-8 border-t border-outline-variant pt-6">
-                    <p class="font-label-xs text-label-xs text-secondary italic tracking-wide uppercase">
+                    <!-- <p class="font-label-xs text-label-xs text-secondary italic tracking-wide uppercase">
                         contact us on whatsapp for faster replies .
-                    </p>
+                    </p> -->
                 </div>
             </div>
         </section>
@@ -237,13 +245,13 @@
                 <p class="font-body-lg text-body-lg text-on-surface-variant">Transparent packages for every stage of your digital journey.</p>
             </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter items-stretch">
                 <!-- Card 1: Personal -->
-                <div class="pricing-card rounded-lg p-8 flex flex-col justify-between h-full relative">
+                <div class="pricing-card rounded-3xl p-8 flex flex-col justify-between h-full relative">
                     <div>
                         <h3 class="font-headline-sm text-headline-sm text-primary">Personal</h3>
                         <div class="mt-4">
-                            <span class="font-display-lg text-3xl font-bold">₹7,000</span>
+                            <span class="font-display-lg text-3xl font-bold">₹8,000</span>
                             <span class="font-label-xs text-secondary uppercase block mt-1">Starting At</span>
                         </div>
                         <ul class="mt-8 space-y-4 border-t border-outline-variant pt-6">
@@ -269,13 +277,13 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="w-full bg-primary text-on-primary font-label-sm text-label-sm py-4 mt-8 hover:bg-surface-tint transition-all rounded uppercase font-bold tracking-wider" aria-label="Inquire about Personal tier">
+                    <button class="w-full bg-primary text-on-primary font-label-sm text-label-sm py-4 mt-8 hover:bg-surface-tint transition-all rounded uppercase font-bold tracking-wider pricing-btn" data-tier="personal" aria-label="Inquire about Personal tier">
                         INQUIRE
                     </button>
                 </div>
 
                 <!-- Card 2: Business (Popular) -->
-                <div class="pricing-card rounded-lg p-8 flex flex-col justify-between h-full relative border-2 border-primary shadow-md">
+                <div class="pricing-card rounded-3xl p-8 flex flex-col justify-between h-full relative border-2 border-primary">
                     <!-- POPULAR Badge -->
                     <div class="absolute -top-3.5 right-6 bg-primary text-on-primary font-label-xs text-xs px-3 py-1 rounded uppercase tracking-wider font-bold">
                         Popular
@@ -283,7 +291,7 @@
                     <div>
                         <h3 class="font-headline-sm text-headline-sm text-primary">Business</h3>
                         <div class="mt-4">
-                            <span class="font-display-lg text-3xl font-bold">₹14,000</span>
+                            <span class="font-display-lg text-3xl font-bold">₹15,000</span>
                             <span class="font-label-xs text-secondary uppercase block mt-1">Starting At</span>
                         </div>
                         <ul class="mt-8 space-y-4 border-t border-outline-variant pt-6">
@@ -305,13 +313,13 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="w-full bg-primary text-on-primary font-label-sm text-label-sm py-4 mt-8 hover:bg-surface-tint transition-all rounded uppercase font-bold tracking-wider" aria-label="Inquire about Business tier">
+                    <button class="w-full bg-primary text-on-primary font-label-sm text-label-sm py-4 mt-8 hover:bg-surface-tint transition-all rounded uppercase font-bold tracking-wider pricing-btn" data-tier="business" aria-label="Inquire about Business tier">
                         INQUIRE
                     </button>
                 </div>
 
                 <!-- Card 3: Custom -->
-                <div class="pricing-card rounded-lg p-8 flex flex-col justify-between h-full relative">
+                <div class="pricing-card rounded-3xl p-8 flex flex-col justify-between h-full relative">
                     <div>
                         <h3 class="font-headline-sm text-headline-sm text-primary">Custom</h3>
                         <div class="mt-4">
@@ -337,7 +345,7 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="w-full bg-transparent text-primary border border-primary font-label-sm text-label-sm py-4 mt-8 hover:bg-surface-container transition-all rounded uppercase font-bold tracking-wider" aria-label="Contact us for custom inquiry">
+                    <button class="w-full bg-transparent text-primary border border-primary font-label-sm text-label-sm py-4 mt-8 hover:bg-surface-container transition-all rounded uppercase font-bold tracking-wider pricing-btn" data-tier="custom" aria-label="Contact us for custom inquiry">
                         CONTACT US
                     </button>
                 </div>
@@ -416,7 +424,30 @@
         </div>
     </footer>
 
+    <!-- Form Submission Feedback Modal Overlay -->
+    <div id="status-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/60 opacity-0 transition-opacity duration-300 pointer-events-none" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <!-- Modal Card -->
+        <div id="modal-card" class="bg-white rounded-3xl p-8 max-w-md w-full mx-margin-mobile border border-outline-variant shadow-2xl transform scale-95 translate-y-4 transition-all duration-300 flex flex-col items-center text-center">
+            <!-- Icon Container (Success/Error) -->
+            <div id="modal-icon-container" class="w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <span id="modal-icon" class="material-symbols-outlined text-4xl">check_circle</span>
+            </div>
+            
+            <!-- Title -->
+            <h3 id="modal-title" class="font-headline-sm text-headline-sm text-primary mb-3">Message Sent</h3>
+            
+            <!-- Message Body -->
+            <p id="modal-message" class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed"></p>
+            
+            <!-- Action Button -->
+            <button id="modal-close-btn" class="w-full bg-primary text-on-primary font-label-sm text-label-sm py-4 rounded hover:bg-surface-tint transition-all uppercase tracking-wider font-bold" aria-label="Close message dialog">
+                Close
+            </button>
+        </div>
+    </div>
+
     <!-- Execution Engine -->
+    <script src="assets/js/config.js"></script>
     <script src="assets/js/app.js" defer></script>
 </body>
 </html>

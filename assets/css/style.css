@@ -20,37 +20,16 @@ h1, h2, h3, h4, h5, h6, .font-display {
     position: relative;
     overflow: hidden;
 }
-.wavy-bg::before, .wavy-bg::after {
-    content: "";
-    position: absolute;
-    left: -50%;
-    min-width: 200vw;
-    min-height: 200vw;
-    background-color: #1c1c1c;
-    animation-name: wave-rotate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    pointer-events: none;
-}
-.wavy-bg::before {
-    bottom: 30vh;
-    border-radius: 43%;
-    animation-duration: 25s;
-    opacity: 0.12;
-}
-.wavy-bg::after {
-    bottom: 25vh;
-    border-radius: 38%;
-    animation-duration: 30s;
-    opacity: 0.08;
-}
-@keyframes wave-rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+
 .wavy-content {
     position: relative;
     z-index: 10;
+}
+
+/* Navigation Logo Size Increase (20% increase from 24px) */
+#main-nav a.mr-auto {
+    font-size: 28.8px !important;
+    line-height: 36px !important;
 }
 
 /* Dynamic Active Navigation Link Bold State */
@@ -66,27 +45,41 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 /* Pricing Card Micro-interactions */
 .pricing-card {
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.2s ease;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
     border: 1px solid #E5E5E5;
     background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: -8px 8px 2px rgba(0, 0, 0, 0.08); /* Left-bottom shadow, minimal blur (2px) for crisp card-shape */
 }
+
+/* Deeper shadow for the featured Popular card */
+.pricing-card.border-primary {
+    box-shadow: -10px 10px 2px rgba(0, 0, 0, 0.12);
+}
+
 @media (hover: hover) {
     .pricing-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
-        border-color: #cfc4c5;
+        transform: translate(6px, -12px) scale(1.02); /* translate up and right, lifting card away from shadow */
+        box-shadow: -16px 16px 2px rgba(0, 0, 0, 0.15); /* crisp left-side shadow showing exact card shape */
+        border-color: #000000;
+    }
+    
+    .pricing-card.border-primary:hover {
+        transform: translate(6px, -12px) scale(1.02);
+        box-shadow: -20px 20px 2px rgba(0, 0, 0, 0.2); /* deeper crisp shadow for featured Popular card */
+        border-color: #000000;
     }
 }
 
 /* Form Fields Interaction Style: Bottom-only borders & Bold highlights */
 .intake-input {
-    background-color: transparent !important;
+    background-color: transparent;
     border-top: none !important;
     border-left: none !important;
     border-right: none !important;
     border-bottom: 1px solid #cfc4c5 !important;
     border-radius: 0 !important;
-    padding: 0.75rem 0 !important;
+    padding: 0.75rem 0;
     font-family: 'Geist', sans-serif;
     color: #1a1c1c;
     width: 100%;
@@ -119,4 +112,18 @@ h1, h2, h3, h4, h5, h6, .font-display {
 .nav-scroll-shadow {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
     border-bottom: 1px solid #E5E5E5;
+}
+
+/* What We Build Cards styling */
+.build-card {
+    border: 1.5px solid #D6CADD;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 24px -8px rgba(180, 160, 200, 0.25);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background-color 0.3s ease;
+}
+.build-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px -8px rgba(180, 160, 200, 0.4);
+    border-color: #9966CC;
+    background-color: #fcfbfe; /* very subtle lavender-tinted background highlight on hover */
 }

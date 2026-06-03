@@ -5,6 +5,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Avorawebstudios — Premium Web Development Studio</title>
     <meta name="description" content="Avorawebstudios is a premium web development studio crafting clean, fast, and minimalist websites for businesses and personal brands.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Tailwind CSS Engine -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -109,7 +114,7 @@
     </script>
     
     <!-- Material Icons and Core Stylesheet -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@24,400,0&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
@@ -151,7 +156,7 @@
     <main class="flex-grow pt-16">
         <!-- Hero Section with Wavy BG and Particle Canvas -->
         <section class="wavy-bg w-full min-h-[80vh] flex flex-col justify-center items-center py-stack-lg border-b border-surface-variant relative">
-            <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-40"></canvas>
+            <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
             <div class="wavy-content max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center flex flex-col items-center">
                 <h1 class="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-white max-w-4xl tracking-tight text-center drop-shadow-md mb-4">Websites that make a strong first impression</h1>
                 <p class="font-body-lg text-body-lg text-gray-300 max-w-3xl mb-stack-md text-center">A small studio building clean, fast, professional websites for small businesses, professionals, and personal brands.</p>
@@ -170,23 +175,23 @@
                 <h2 class="font-headline-md text-headline-md text-primary mb-2">What We Build</h2>
                 <div class="w-12 h-1 bg-primary"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-                <div class="p-6 border border-surface-variant rounded bg-surface-container-lowest hover:bg-surface-bright transition-colors duration-200">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <div class="build-card p-6 bg-surface-container-lowest">
                     <span class="material-symbols-outlined mb-4 text-3xl text-primary">domain</span>
                     <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Business Websites</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant">Professional online presence for local businesses, consultants, and service providers.</p>
                 </div>
-                <div class="p-6 border border-surface-variant rounded bg-surface-container-lowest hover:bg-surface-bright transition-colors duration-200">
+                <div class="build-card p-6 bg-surface-container-lowest">
                     <span class="material-symbols-outlined mb-4 text-3xl text-primary">badge</span>
                     <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Portfolio Websites</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant">Thoughtful showcases for architects, photographers, artists, and creators.</p>
                 </div>
-                <div class="p-6 border border-surface-variant rounded bg-surface-container-lowest hover:bg-surface-bright transition-colors duration-200">
+                <div class="build-card p-6 bg-surface-container-lowest">
                     <span class="material-symbols-outlined mb-4 text-3xl text-primary">flight_land</span>
                     <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Landing Pages</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant">Focused, high-converting pages for coaches, tutors, and specific projects.</p>
                 </div>
-                <div class="p-6 border border-surface-variant rounded bg-surface-container-lowest hover:bg-surface-bright transition-colors duration-200">
+                <div class="build-card p-6 bg-surface-container-lowest">
                     <span class="material-symbols-outlined mb-4 text-3xl text-primary">autorenew</span>
                     <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Website Refreshes</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant">Modernizing existing sites with clean code and refined aesthetics.</p>
@@ -202,13 +207,13 @@
                         <h2 class="font-headline-md text-headline-md text-primary mb-2">Featured Work</h2>
                         <div class="w-12 h-1 bg-primary"></div>
                     </div>
-                    <a class="flex items-center font-label-sm text-label-sm text-primary hover:text-surface-tint transition-colors" href="work.html">
+                    <a id="view-all-link" class="flex items-center font-label-sm text-label-sm text-primary hover:text-surface-tint transition-colors" href="work.html">
                         View All <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
                     </a>
                 </div>
 
-                <!-- Showcase container target hydrated asynchronously -->
-                <div id="featured-work-container" class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+                <!-- Showcase container target hydrated dynamically -->
+                <div id="featured-work-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
                     <!-- Loading Phase Skeletons -->
                     <div class="animate-pulse flex flex-col gap-4">
                         <div class="aspect-[4/3] bg-surface-container border border-surface-variant rounded"></div>
@@ -269,6 +274,8 @@
     </footer>
 
     <!-- Execution Engine -->
+    <script src="assets/js/work-data.js" defer></script>
+    <script src="assets/js/render-work.js" defer></script>
     <script src="assets/js/app.js" defer></script>
 </body>
 </html>
