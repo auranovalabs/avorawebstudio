@@ -21,19 +21,19 @@ LATEST PROJECTS SHOULD ALWAYS BE PLACED AT THE TOP of the list.
 
 const featuredWork = [
   {
-    title: "Abinanth A",
-    caption: "Abinanth's Portfolio Website",
-    category: "Personal Portfolio",
-    year: "2026",
-    image: "/abinanth.png",
-    link: "https://abinanth.indevs.in/"
-  },
-  {
     title: "Major Engineering Construction",
     caption: "MEC's Bussines Website",
     category: "Bussiness",
     year: "2026",
     image: "https://i.ibb.co/TBWzRWzS/mec.png",
     link: "https://www.mecchennai.com/"
+  },
+  {
+    title: "Abinanth A",
+    caption: "Abinanth's Portfolio Website",
+    category: "Personal Portfolio",
+    year: "2026",
+    image: "https://i.ibb.co/218bctFv/abinanth.png",
+    link: "https://abinanth.indevs.in/"
   },
 ];
