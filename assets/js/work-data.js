@@ -25,7 +25,7 @@ const featuredWork = [
     caption: "Abinanth's Portfolio Website",
     category: "Personal Portfolio",
     year: "2026",
-    image: "https://i.ibb.co/218bctFv/abinanth.png",
+    image: "/abinanth.png",
     link: "https://abinanth.indevs.in/"
   },
   {
