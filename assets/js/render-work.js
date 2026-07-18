@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (portfolioContainer) {
-        renderPortfolioGrid(portfolioContainer, featuredWork.slice(0, 2), DEFAULT_PROJECT_IMAGE);
+        renderPortfolioGrid(portfolioContainer, featuredWork, DEFAULT_PROJECT_IMAGE);
     }
 });
 
